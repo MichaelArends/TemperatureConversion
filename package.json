@@ -1,0 +1,22 @@
+{
+  "name": "mednet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "cd temp-conversion && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "client": "npm run start --prefix temp-conversion",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
