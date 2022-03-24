@@ -28,12 +28,12 @@ The server accepts a JSON array of your data.
 
 
 ```javascript
-[{
-    tempInput: "",      //String temperature number.
-    tempInputType: "",  //Type of the initial question.
-    targetUnits: "",    //Type your student is converting to.
-    studentResponse: "" //String version of the students answers.
-}]
+'[{
+    "tempInput":"",         //String temperature number.
+    "tempInputType":"",     //Type of the initial question.
+    "targetUnits":"",       //Type your student is converting to.
+    "studentResponse":""    //String version of the students answers.
+}]'
 ```
 
 The temperature input type and target units can be as follows:
