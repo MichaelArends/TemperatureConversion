@@ -19,7 +19,6 @@ isValidNumber = (numberToCheck) => {
 }
 
 convertToCelsius = (convertFrom, tempInput, studentResponse) => {
-  console.log('tempInput toCelsius = ', tempInput)
   let grade = ''
   let correctAnswer = 0
   switch(convertFrom) {
@@ -162,8 +161,6 @@ app.post('/express_backend', (req, res) => {
     data += chunk;
   })
   req.on('end', () => {
-    console.log(JSON.parse(data)); 
-    console.log('about to send the hello!')
     let studentInput = returnGrades(JSON.parse(data))
     res.status(200).send({response: studentInput});
   })
