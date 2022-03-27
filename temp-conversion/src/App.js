@@ -97,8 +97,8 @@ class App extends Component {
           ))
         }
         <div className="form-submission">
-          <button className="waves-effect waves-light btn" onClick={this.addRow}> Add Row</button>
-          <input className="waves-effect waves-light btn purple" type="submit" value="Submit" />
+          <button className="btn" onClick={this.addRow}> Add Row</button>
+          <input className="btn purple" type="submit" value="Submit" />
         </div>
         </form>
       </div>

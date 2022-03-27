@@ -123,21 +123,21 @@ returnGrades = (studentInput) => {
       //We first do a toFixed becaue Math.round will only round based on the first decimal place.
       //ToFixed will round correctly to the first decimal place
       //We only want to round the student's input here because the tempInput has not had the equation done yet.
-      rowToCheck.studentResponse = Math.round(parseFloat(rowToCheck.studentResponse).toFixed(1))
+      rowToCheck.studentResponseRounded = Math.round(parseFloat(rowToCheck.studentResponse).toFixed(1))
       //The numbers come in as strings so we want to parse them before running them.
-      rowToCheck.tempInput = parseFloat(rowToCheck.tempInput)
+      rowToCheck.tempInputRounded = parseFloat(rowToCheck.tempInput)
       switch(rowToCheck.targetUnits) {
         case TemperatureTypes.Celsius:
-          grade = convertToCelsius(rowToCheck.tempInputType, rowToCheck.tempInput, rowToCheck.studentResponse)
+          grade = convertToCelsius(rowToCheck.tempInputType, rowToCheck.tempInputRounded, rowToCheck.studentResponseRounded)
           break;
         case TemperatureTypes.Fahrenheit:
-          grade = convertToFahrenheit(rowToCheck.tempInputType, rowToCheck.tempInput, rowToCheck.studentResponse)
+          grade = convertToFahrenheit(rowToCheck.tempInputType, rowToCheck.tempInputRounded, rowToCheck.studentResponseRounded)
           break;
         case TemperatureTypes.Kelvin:
-          grade = convertToKelvin(rowToCheck.tempInputType, rowToCheck.tempInput, rowToCheck.studentResponse)
+          grade = convertToKelvin(rowToCheck.tempInputType, rowToCheck.tempInputRounded, rowToCheck.studentResponseRounded)
           break;
         case TemperatureTypes.Rankine:
-          grade = convertToRankine(rowToCheck.tempInputType, rowToCheck.tempInput, rowToCheck.studentResponse)
+          grade = convertToRankine(rowToCheck.tempInputType, rowToCheck.tempInputRounded, rowToCheck.studentResponseRounded)
           break;
         default:
           grade = "Not a valid target conversion type"
